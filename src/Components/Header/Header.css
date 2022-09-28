@@ -1,0 +1,9 @@
+.header {
+  background-color: #c2b2b2;
+  color: #141414;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
