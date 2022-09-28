@@ -1,11 +1,14 @@
 import React from "react";
+import Products from "../Products/Products";
 
 const Main = () => {
   return (
     <div>
-      <section className="card-section mt-20">
-        <h className="text-3xl">Hi i am from Main for card </h>
+      <section className="card-container mt-20 container mx-auto">
+        <Products></Products>
       </section>
+
+      <section className="side-bar"></section>
     </div>
   );
 };
