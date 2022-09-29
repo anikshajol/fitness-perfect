@@ -1,10 +1,17 @@
+.side-bar {
+  box-shadow: 10px 10px 10px gray;
+  width: 100%;
+  padding: 1.5rem;
+}
+
 .user-profile {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .display-image {
-  width: 50%;
+  width: 40%;
 }
 
 .display-image img {
@@ -13,17 +20,25 @@
 }
 
 .user-name {
-  width: 50%;
+  width: 60%;
 }
 
 .user-info {
   width: 100%;
   padding: 2rem 0.8rem;
-  background-color: rgb(216, 207, 207);
+  background-color: rgb(240, 233, 233);
   margin-top: 2rem;
-  margin-left: 1rem;
+  border-radius: 10px;
 }
 .user-info h2 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.second {
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 100%;
+  padding: 0.3rem;
+  background-color: white;
 }
