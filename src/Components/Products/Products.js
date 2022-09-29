@@ -5,6 +5,8 @@ const Products = ({ product }) => {
   const { age, name, picture, time, toAge } = product;
   console.log(product);
 
+  // const [cart, setCart] = useState([]);
+
   return (
     <section className="product-card-container grid grid-cols-3 gap-32 mt-20 ">
       <div className="card card-compact w-72 bg-base-100 shadow-xl">
