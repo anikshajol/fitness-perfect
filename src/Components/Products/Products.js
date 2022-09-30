@@ -18,11 +18,14 @@ const Products = ({ product, handleAdd }) => {
             For Age: {age}-{toAge}
           </p>
           <p>
-            Time required: {time}
+            Time required: {parseInt(time)}
             <span>s</span>
           </p>
           <div className="card-actions justify-end">
-            <button onClick={() => handleAdd(time)} className="btn btn-primary">
+            <button
+              onClick={() => handleAdd(product)}
+              className="btn btn-primary"
+            >
               Add
             </button>
           </div>

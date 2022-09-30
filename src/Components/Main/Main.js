@@ -14,17 +14,16 @@ const Main = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  const handleAdd = (products) => {
-    console.log(products);
-    const newSecond = [...second, products];
-    setSecond(parseFloat(newSecond));
-    console.log(newSecond);
+  const handleAdd = (product) => {
+    console.log(product);
+    const newSecond = [...second, product];
+
+    setSecond(newSecond);
   };
 
   const handleBreakTime = (e) => {
     const newTime = e.target.innerText;
     setTime(newTime);
-    console.log(newTime);
   };
 
   return (
@@ -40,7 +39,6 @@ const Main = () => {
       </section>
 
       <section className="side-bar h-full bg-white-500">
-        <SideBar></SideBar>
         <section className="ml-1">
           <div className="user-profile">
             <div className="display-image">
@@ -102,29 +100,14 @@ const Main = () => {
           </div>
         </section>
 
-        <section className="mt-12 ml-4 text-3xl ">
-          <h2>Exercise Details</h2>
-          <div>
-            <section className="user-info flex justify-around gap-4">
-              <div className="exercise-time">
-                <h2>Exercise time</h2>
-              </div>
-              <div className="time">
-                <p>
-                  {second}
-                  <span>seconds</span>
-                </p>
-              </div>
-            </section>
+        <SideBar second={second}></SideBar>
 
-            <section className="user-info flex justify-around gap-4">
-              <div className="exercise-time">
-                <h2>Break time</h2>
-              </div>
-              <div className="time">
-                <p id="addTime">{time}</p>
-              </div>
-            </section>
+        <section className="user-info flex justify-around gap-4">
+          <div className="exercise-time">
+            <h2>Break time</h2>
+          </div>
+          <div className="time">
+            <p id="addTime">{time}</p>
           </div>
         </section>
 
