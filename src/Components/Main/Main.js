@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Main.css";
 import Products from "../Products/Products";
 import SideBar from "../Sidebar/SideBar";
+import Swal from "sweetalert2";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
@@ -24,6 +25,10 @@ const Main = () => {
   const handleBreakTime = (e) => {
     const newTime = e.target.innerText;
     setTime(newTime);
+  };
+
+  const handleCompletedActivity = () => {
+    Swal.fire("Good job!", "You clicked the button!", "success");
   };
 
   return (
@@ -76,25 +81,25 @@ const Main = () => {
           <div>
             <section className="user-info grid grid-cols-4 gap-4">
               <div className="age">
-                <h2 onClick={(e) => handleBreakTime(e)} className="second">
+                <button onClick={(e) => handleBreakTime(e)} className="second">
                   29s
-                </h2>
+                </button>
               </div>
 
               <div className="weight">
-                <h2 onClick={(e) => handleBreakTime(e)} className="second">
-                  75s
-                </h2>
+                <button onClick={(e) => handleBreakTime(e)} className="second">
+                  27s
+                </button>
               </div>
               <div className="height">
-                <h2 onClick={(e) => handleBreakTime(e)} className="second">
-                  30s
-                </h2>
+                <button onClick={(e) => handleBreakTime(e)} className="second">
+                  33s
+                </button>
               </div>
               <div className="height">
-                <h2 onClick={(e) => handleBreakTime(e)} className="second">
-                  25s
-                </h2>
+                <button onClick={(e) => handleBreakTime(e)} className="second">
+                  39s
+                </button>
               </div>
             </section>
           </div>
@@ -112,7 +117,10 @@ const Main = () => {
         </section>
 
         <div className=" flex justify-center mt-12">
-          <button className="btn btn-active btn-primary w-2/4">
+          <button
+            onClick={() => handleCompletedActivity()}
+            className="btn btn-active btn-primary w-2/4"
+          >
             Completed Activity
           </button>
         </div>
