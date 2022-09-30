@@ -12,7 +12,7 @@ const SideBar = ({ second }) => {
 
   return (
     <div className="side-bar-container">
-      <section className="mt-12 ml-4 text-3xl ">
+      <section className="mt-12 text-3xl ">
         <h2>Exercise Details</h2>
         <div>
           <section className="user-info flex justify-around gap-4">
@@ -22,7 +22,7 @@ const SideBar = ({ second }) => {
             <div className="time">
               <p>
                 {total}
-                <span>seconds</span>
+                <span>s</span>
               </p>
             </div>
           </section>

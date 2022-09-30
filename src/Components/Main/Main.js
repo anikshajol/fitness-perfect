@@ -27,8 +27,8 @@ const Main = () => {
   };
 
   return (
-    <div className="main-container container mx-auto">
-      <section className="card-container  grid grid-cols-3  ">
+    <div className="main-container flex flex-col lg:flex-row gap-12 items-center container mx-auto">
+      <section className="card-container grid grid-cols-1 lg:grid-cols-3 pl-10">
         {products.map((product) => (
           <Products
             key={product._id}
@@ -71,7 +71,7 @@ const Main = () => {
           </div>
         </section>
 
-        <section className="mt-12 ml-4 text-3xl ">
+        <section className="mt-12 text-3xl ">
           <h2>Add a Break</h2>
           <div>
             <section className="user-info grid grid-cols-4 gap-4">
@@ -107,7 +107,7 @@ const Main = () => {
             <h2>Break time</h2>
           </div>
           <div className="time">
-            <p id="addTime">{time}</p>
+            <p className="text-3xl">{time}</p>
           </div>
         </section>
 
