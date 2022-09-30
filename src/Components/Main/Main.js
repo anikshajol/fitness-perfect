@@ -3,6 +3,8 @@ import "./Main.css";
 import Products from "../Products/Products";
 import SideBar from "../Sidebar/SideBar";
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
@@ -28,7 +30,7 @@ const Main = () => {
   };
 
   const handleCompletedActivity = () => {
-    Swal.fire("Good job!", "You clicked the button!", "success");
+    Swal.fire("Good job!", "Completed your Activity!", "success");
   };
 
   return (
@@ -51,6 +53,9 @@ const Main = () => {
             </div>
             <div className="user-name">
               <p>Md Anik Hasan</p>
+              <span>
+                <FontAwesomeIcon icon={faLocationPin} />
+              </span>
               <small className="text-gray-400">Dhaka, bangladesh</small>
             </div>
           </div>
