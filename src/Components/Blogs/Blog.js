@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="p-5">
       <section className=" container mx-auto mt-6">
         <h2 className="text-2xl font-bold">How does react work? </h2>
         <p className="text-lg mt-6">

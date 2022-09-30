@@ -7,7 +7,7 @@ const Products = ({ product, handleAdd }) => {
   // const [cart, setCart] = useState([]);
 
   return (
-    <section className="product-card-container grid grid-cols-3 gap-32 mt-20 ">
+    <section className="product-card-container grid grid-cols-3 lg:gap-32 mt-20 ">
       <div className="card card-compact w-72 bg-base-100 shadow-xl">
         <figure>
           <img src={picture} alt="Shoes" />

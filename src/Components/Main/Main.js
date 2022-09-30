@@ -35,7 +35,7 @@ const Main = () => {
 
   return (
     <div className="main-container flex flex-col lg:flex-row gap-12 items-center container mx-auto">
-      <section className="card-container grid grid-cols-1 lg:grid-cols-3 pl-10">
+      <section className="card-container grid grid-cols-1 pl-6 lg:pl-0 gap-11 lg:grid-cols-3 ">
         {products.map((product) => (
           <Products
             key={product._id}
